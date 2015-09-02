@@ -29,39 +29,42 @@
     NSLog(@"Squawk!");
     NSLog(@"%@", @"Squawk!");
     NSLog(@"%@!", @"Squawk");
-    NSLog(@"%@!", [@"squawk" capitalizedString]);
+    NSLog(@"%@!", [@"Squawk" uppercaseString]);
     
     // B.
     NSString *squawk = @"squawk";
     NSLog(@"%@", squawk);
-    squawk = [squawk capitalizedString];
+    squawk = [squawk uppercaseString];
     NSLog(@"%@", squawk);
     squawk = [squawk stringByAppendingString:@"!"];
     NSLog(@"%@", squawk);
     
     // Code-Along II: "Dead men tell no tales!"
     // A.
-    NSString *dead = @"Dead";
-    NSString *men = @"men";
-    NSString *tell = @"tell";
-    NSString *noString = @"no";
-    NSString *tales = @"tales";
-    NSLog(@"%@ %@ %@ %@ %@!", dead, men, tell, noString, tales);
+    NSString *wind = @"Wind";
+    NSString *inString = @"in";
+    NSString *yer = @"yer";
+    NSString *sails = @"sails";
+    NSLog(@"%@ %@ %@ %@!", wind, inString, yer, sails);
     
     // B.
-    NSLog(@"%@", dead);
-    NSString *pirateParrot = [NSString stringWithString:dead];
-    NSLog(@"%@", pirateParrot);
-    pirateParrot = [pirateParrot stringByAppendingString:@" "];
-    pirateParrot = [pirateParrot stringByAppendingString:men];
-    NSLog(@"%@", pirateParrot);
-    pirateParrot = [pirateParrot stringByAppendingString:@" "];
-    pirateParrot = [pirateParrot stringByAppendingString:tell];
-    NSLog(@"%@", pirateParrot);
-    pirateParrot = [pirateParrot stringByAppendingFormat:@" %@", noString];
-    NSLog(@"%@", pirateParrot);
-    pirateParrot = [pirateParrot stringByAppendingFormat:@" %@!", tales];
-    NSLog(@"%@", pirateParrot);
+    NSString *windInYerSails = [NSString stringWithFormat:@"%@ %@ %@ %@!", wind, inString, yer, sails];
+    NSLog(@"%@", windInYerSails);
+    
+    // C.
+    NSLog(@"%@", wind);
+    windInYerSails = [NSString stringWithString:wind];
+    NSLog(@"%@", windInYerSails);
+    
+    windInYerSails = [windInYerSails stringByAppendingString:@" "];
+    windInYerSails = [windInYerSails stringByAppendingString:inString];
+    NSLog(@"%@", windInYerSails);
+    
+    windInYerSails = [windInYerSails stringByAppendingFormat:@" %@", yer];
+    NSLog(@"%@", windInYerSails);
+    
+    windInYerSails = [windInYerSails stringByAppendingFormat:@" %@!", sails];
+    NSLog(@"%@", windInYerSails);
     
     // Code-Along III: Iago Is Molting
     // A.
@@ -71,6 +74,7 @@
     NSString *im = @"i'm";
     NSString *molting = @"molting";
     NSLog(@"%@%@%@%@%@", look, at, me, im, molting);
+    NSLog(@"%@ %@ %@ %@ %@", look, at, me, im, molting);
     NSLog(@"%@ %@ %@, %@ %@!", look, at, me, im, molting);
     NSLog(@"%@ %@ %@, %@ %@!", [look uppercaseString], [at uppercaseString], [me uppercaseString], [im uppercaseString], [molting uppercaseString]);
     
