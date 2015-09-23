@@ -10,7 +10,7 @@
 		45DB2D28C27BB74E7FA5B97E /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F927DDE00B36AA7CBF212C8 /* FISAppDelegate.m */; };
 		83335579EB0C3F2B69950D76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ABF9789DECDEFAA9F788DC /* Images.xcassets */; };
 		A376ECC17190793C7A3F9A33 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6B4054F99C0AF7060910F0E8 /* LaunchScreen.xib */; };
-		C13B59B6656C7B5BE2410AD3 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 648A6D4D1CD44C759A1982DF /* Main.storyboard */; };
+		C13B59B6656C7B5BE2410AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648A6D4D1CD44C759A1982DF /* Main.storyboard */; };
 		C9804257D32DA9FD466072CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FF46C1629EE4124A2EEF3 /* main.m */; };
 		F0F3C9335320B705C5DDB67E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036764AAA6875CBE80FEDF74 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -173,7 +173,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FIS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "The Flatiron School";
 			};
 			buildConfigurationList = 898C08B4C35691CA925C8034 /* Build configuration list for PBXProject "objc-parrot" */;
@@ -200,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83335579EB0C3F2B69950D76 /* Images.xcassets in Resources */,
+				C13B59B6656C7B5BE2410AD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DB2D28C27BB74E7FA5B97E /* FISAppDelegate.m in Sources */,
-				C13B59B6656C7B5BE2410AD3 /* Main.storyboard in Sources */,
 				A376ECC17190793C7A3F9A33 /* LaunchScreen.xib in Sources */,
 				C9804257D32DA9FD466072CC /* main.m in Sources */,
 			);
@@ -293,6 +293,7 @@
 				INFOPLIST_FILE = "objc-parrot/Resources/Other-Sources/objc-parrot-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -369,6 +370,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -420,6 +422,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
